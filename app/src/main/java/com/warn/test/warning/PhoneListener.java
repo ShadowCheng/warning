@@ -29,7 +29,7 @@ public class PhoneListener extends PhoneStateListener {
             case TelephonyManager.CALL_STATE_RINGING://来电响铃
                 Log.d("TAG", "来电号码是:" + incomingNumber);
                 if("15995185772".equals(incomingNumber)){
-                    AudioManager audio = (AudioManager) MyApplication.getContext().getSystemService(Service.AUDIO_SERVICE);
+                    AudioManager audio = (AudioManager) MyApplication.getContext().getSystemService(Context.AUDIO_SERVICE);
                     audio.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
                     audio.setStreamVolume(AudioManager.STREAM_RING, 6, AudioManager.FLAG_PLAY_SOUND);
                 }

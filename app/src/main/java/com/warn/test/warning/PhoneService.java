@@ -20,7 +20,7 @@ public class PhoneService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        TelephonyManager manager = (TelephonyManager) getSystemService(Service.TELEPHONY_SERVICE);
+        TelephonyManager manager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         manager.listen(new PhoneListener() , PhoneStateListener.LISTEN_CALL_STATE);
     }
 }
